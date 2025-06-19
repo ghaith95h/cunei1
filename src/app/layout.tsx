@@ -1,21 +1,18 @@
-import React from 'react';
-import '../styles/index.css';
+import React from "react";
+import "../styles/index.css";
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
 export const metadata = {
-  title: 'Next.js with Tailwind CSS',
-  description: 'An uodate project with Next.js and Tailwind CSS',
+  title: "Next.js with Tailwind CSS",
+  description: "An uodate project with Next.js and Tailwind CSS",
   icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
-    ],
+    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -25,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      {children}
+        {children}
         <script id="errorTracker" src="error-tracker.js"></script>
-  <script id="elementInspector" src="web-inspector.js"></script>
-</body>
+        <script id="elementInspector" src="web-inspector.js"></script>
+      </body>
     </html>
   );
 }
