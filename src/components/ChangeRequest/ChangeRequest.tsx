@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
+import Table from "./Table";
 
 const ChangeRequest = () => {
   const nav = useRouter();
@@ -15,6 +16,7 @@ const ChangeRequest = () => {
           + Add New
         </button>
       </div>
+      <Table />
     </div>
   );
 };
