@@ -26,7 +26,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
       <NavBar username="Zahraa Alaa" userInitials="ZA" />
       <div className="flex pt-[80px] h-screen">
         <Sidebar activeItem={getActiveItem()} />
-        <main className="flex-1 overflow-y-auto h-[calc(100vh-80px)] w-full">
+        <main className="flex-1 overflow-y-auto h-[calc(100vh-80px)] w-full p-4 lg:p-8">
           {children}
         </main>
       </div>
