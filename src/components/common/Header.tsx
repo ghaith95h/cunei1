@@ -8,7 +8,7 @@ interface HeaderProps {
   userInitials?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({
+const NavBar: React.FC<HeaderProps> = ({
   username = "Zahraa Alaa",
   userInitials = "ZA",
 }) => {
@@ -16,14 +16,15 @@ const Header: React.FC<HeaderProps> = ({
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full h-[80px] bg-white flex items-center justify-between px-[80px] z-50 shadow-sm font-[Manrope]">
+    <header className="fixed top-0 left-0 w-full h-[80px] bg-white flex items-center justify-between px-4 lg:px-[80px] z-50 shadow-sm font-[Manrope]">
       {/* Logo Section */}
-      <div className="flex items-center w-[167.33px] h-[40px]">
+      <div className="flex items-center">
         <Image
           src="/images/img_1_1_1.png"
           alt="CRVS Logo"
           width={167}
           height={40}
+          className="h-[40px] w-auto"
         />
       </div>
 
@@ -90,4 +91,4 @@ const Header: React.FC<HeaderProps> = ({
   );
 };
 
-export default Header;
+export default NavBar;

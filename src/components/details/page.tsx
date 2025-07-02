@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Header from "@/components/common/Header";
-import Sidebar from "@/components/common/Sidebar";
 import ReleaseNotes from "./ReleaseNotes";
 import VersionHistory from "./VersionHistory";
 
@@ -29,16 +27,12 @@ const versions = [
 
 export default function UpdateDetails() {
   return (
-    <div className="w-[1440px] h-[1156px] bg-[#fcfcfc] font-[Manrope] mx-auto overflow-hidden relative">
-      <Header username="Zahraa Alaa" userInitials="ZA" />
-      <div className="flex pt-[80px]">
-        <Sidebar activeItem="updates" />
-        <main className="flex-1 p-8 pr-[320px] overflow-y-auto h-[936px]">
-          <ReleaseNotes />
-        </main>
-        <div className="absolute top-[80px] left-[1144px] w-[296px] h-[936px] bg-[#fcfcfc] border-l border-[#f5f5f9] overflow-y-auto scrollbar-thin scrollbar-thumb-[#d4d4d4] scrollbar-track-transparent">
-          <VersionHistory versions={versions} />
-        </div>
+    <div className="flex h-full relative">
+      <div className="flex-1 p-8 pr-8 lg:pr-[320px] overflow-y-auto">
+        <ReleaseNotes />
+      </div>
+      <div className="hidden lg:block absolute top-0 right-0 w-[296px] h-full bg-[#fcfcfc] border-l border-[#f5f5f9] overflow-y-auto scrollbar-thin scrollbar-thumb-[#d4d4d4] scrollbar-track-transparent">
+        <VersionHistory versions={versions} />
       </div>
     </div>
   );

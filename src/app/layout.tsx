@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/index.css";
+import AppLayout from "@/components/common/AppLayout";
 
 export const viewport = {
   width: "device-width",
@@ -8,7 +9,7 @@ export const viewport = {
 
 export const metadata = {
   title: "Next.js with Tailwind CSS",
-  description: "An uodate project with Next.js and Tailwind CSS",
+  description: "An update project with Next.js and Tailwind CSS",
   icons: {
     icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
   },
@@ -22,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <script id="errorTracker" src="error-tracker.js"></script>
-        <script id="elementInspector" src="web-inspector.js"></script>
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );
